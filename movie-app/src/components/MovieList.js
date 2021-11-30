@@ -7,7 +7,7 @@ function MovieList({ movieArr }) {
   const movies = movieArr;
 
   return (
-    <>
+    <div className="col">
       {movies &&
         movies.map((movie) => {
           return (
@@ -21,7 +21,7 @@ function MovieList({ movieArr }) {
             </div>
           );
         })}
-    </>
+    </div>
   );
 }
 
