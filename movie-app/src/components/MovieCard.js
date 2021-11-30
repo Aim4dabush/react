@@ -8,7 +8,9 @@ function MovieCard({ type, poster, title }) {
           <img src={poster} className="card-img-top" alt={title} />
           <div className="card-body">
             <h5 className="card-title">{title}</h5>
-            <p className="card-text">{type}</p>
+            <p className="card-text">
+              <span className="badge bg-danger">{type}</span>
+            </p>
           </div>
         </div>
       </div>
