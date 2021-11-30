@@ -11,4 +11,3 @@ export const getMovieDetailsById = async (id) => {
     const idSearch = await fetch(url);
     return await idSearch.json();
 }
-
