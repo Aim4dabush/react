@@ -14,9 +14,14 @@ function MovieDetails(props) {
     language,
     director,
     release,
+    close,
   } = props;
+  const handleCloseDetails = () => {
+    close(false);
+  };
+
   return (
-    <div className="row mt-3">
+    <div className="row">
       <div className="col">
         <div className="card">
           <div className="row">
@@ -33,17 +38,22 @@ function MovieDetails(props) {
                 className="img-fluid rounded-start w-100"
                 alt={title}
               />
+              <div className="col-12 d-flex justify-content-center mt-3">
+                <button className="btn btn-danger" onClick={handleCloseDetails}>
+                  Close details
+                </button>
+              </div>
             </div>
             <div className="col-12 col-sm-8">
               <div className="card-body">
                 <div className="row">
-                  <div className="col-4 mt-1">
+                  <div className="col-6 mt-1">
                     <span className="badge bg-secondary">{rated}</span>
                   </div>
-                  <div className="col-4 mt-1">
+                  <div className="col-6 mt-1">
                     <span className="badge bg-secondary">{runtime}</span>
                   </div>
-                  <div className="col-4 mt-1">
+                  <div className="col-12 mt-1">
                     <span className="badge bg-secondary">{genre}</span>
                   </div>
                   <div className="col-12 mt-3">
@@ -58,11 +68,11 @@ function MovieDetails(props) {
                     <h5 className="card-title">Actors</h5>
                     <p className="card-text">{actors}</p>
                   </div>
-                  <div className="col-6 mt-3">
+                  <div className="col-12 col-xl-6 mt-3">
                     <h5 className="card-title">Release</h5>
                     <p className="card-text">{release}</p>
                   </div>
-                  <div className="col-6 mt-3">
+                  <div className="col-12 col-xl-6 mt-3">
                     <h5 className="card-title">Language</h5>
                     <p className="card-text">{language}</p>
                   </div>
